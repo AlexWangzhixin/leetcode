@@ -38,7 +38,7 @@ public:
             int middle = left + ((right - left) >> 1);  // 防止溢出 等同于(left + right)/2
             // 对于二进制的正数来说，右移x位相当于除以2的x几次方，所以右移一位等于➗2，
             // 用位运算的好处是比直接相除的操作快
-            if (nums[middle] > target) {
+            if (nums[middle] > target) { // 中括号索引
                 right = middle;
             } else if (nums[middle] < target) {
                 left = middle + 1;
