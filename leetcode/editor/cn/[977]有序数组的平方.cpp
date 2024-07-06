@@ -48,7 +48,7 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    vector<int> sortedSquares(vector<int>& nums) {  //可变数组，c++标准库类型
+    vector<int> sortedSquares(vector<int>& nums) {  //可变数组，c++标准库类型.
         vector<int> result(nums.size(), 0);  // result被初始化为包含num.size()个值为0的int!
         int k = nums.size() - 1;  // k指向result数组终止位置!
         for (int i = 0, j = nums.size() - 1; i <= j ;) {  // 注意j = nums.size() - 1；
