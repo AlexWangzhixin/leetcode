@@ -54,7 +54,7 @@ public:
         for (int i = 0, j = nums.size() - 1; i <= j ;) {  // 注意j = nums.size() - 1；
             // 注意这里要i <= j! 因为最后要处理两个元素
             if (nums[i] * nums[i] < nums[j] * nums[j]) {
-                result[k--] = nums[j] * nums[j];  // k--!
+                result[k--] = nums[j] * nums[j];  // 注意k--!
                 j--;
             }
             else {
