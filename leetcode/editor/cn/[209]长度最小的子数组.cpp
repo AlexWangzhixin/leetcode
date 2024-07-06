@@ -59,17 +59,17 @@ public:
         int result = INT32_MAX;
         int i = 0;
         int sum = 0;
-        int subL = INT32_MAX;
-        for (int j = 0, j < nums.size(), j++) {
+        int subL;
+        for (int j = 0; j < nums.size(); j++) {
             sum += nums[j];
-            if (sum >= target) {
+            // 注意这里使用while！每次更新 i（起始位置），并不断比较子序列是否符合条件
+            while (sum >= target) {
                 subL = j - i + 1;
-                subL = min(subL, result);
-                sum -= nums[i];
-                i++;
+                result = min(subL, result);  // 每步都比较
+                sum -= nums[i++];  // 不断变更i，注意可以就放进去！
             }
         }
-        return result;
+        return result == INT32_MAX? 0 : result;  // 选择 + 返回
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
