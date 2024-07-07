@@ -14,4 +14,5 @@ add_executable(task leetcode/editor/cn/[977]有序数组的平方.cpp
         leetcode/editor/cn/[27]移除元素.cpp
         leetcode/editor/cn/[203]移除链表元素.cpp
         leetcode/editor/cn/[707]设计链表.cpp
-        leetcode/editor/cn/[206]反转链表.cpp)
+        leetcode/editor/cn/[206]反转链表.cpp
+        leetcode/editor/cn/[24]两两交换链表中的节点.cpp)

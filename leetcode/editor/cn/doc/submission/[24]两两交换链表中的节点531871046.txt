@@ -1,0 +1,28 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def swapPairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        dummy = ListNode(next = head)
+        cur = dummy
+
+        while cur.next and cur.next.next:
+            temp = cur.next             
+            temp1 = cur.next.next        
+
+            cur.next = temp1             # 0指2          0 2
+            temp.next = temp1.next       # 1指3          1 3 
+            temp1.next = temp            # 2指1          0 2 1 3
+
+            cur = temp                   # cur移动到1，下一个可交换3,4
+        
+        return dummy.next      
+
+# runtime:11 ms
+# memory:11.6 MB
