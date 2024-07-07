@@ -13,4 +13,5 @@ add_executable(task leetcode/editor/cn/[977]有序数组的平方.cpp
         leetcode/editor/cn/[209]长度最小的子数组.cpp
         leetcode/editor/cn/[27]移除元素.cpp
         leetcode/editor/cn/[203]移除链表元素.cpp
-        leetcode/editor/cn/[707]设计链表.cpp)
+        leetcode/editor/cn/[707]设计链表.cpp
+        leetcode/editor/cn/[206]反转链表.cpp)
