@@ -4,7 +4,7 @@ project(leetcode)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
-add_subdirectory(leetcode/editor/cn/include)
+add_subdirectory(leetcode/editor/cn/include) # 头文件库地址得自己加
 
 
 # [] 不能放在第一位 要给add_executable文件名task这种英文开头

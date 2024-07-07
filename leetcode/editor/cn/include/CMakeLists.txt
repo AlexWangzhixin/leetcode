@@ -1,2 +1,2 @@
-add_library(leetcode INTERFACE)
-target_include_directories(leetcode INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+aux_source_directory(. LEETCODE)
+add_library(leetcode ${LEETCODE})
