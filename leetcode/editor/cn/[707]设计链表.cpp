@@ -53,34 +53,79 @@
 
 #include "include/headers.h"
 #include<vector>
+
 using namespace std;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class MyLinkedList {
 public:
     MyLinkedList() {
-
+        _dummyHead = new ListNode(0);
+        _size = 0;
     }
-    
+
     int get(int index) {
-
+        if (index >= _size || index < 0) {
+            return -1;
+        }
+        ListNode *cur = _dummyHead->next;
+        while (index--) {
+            cur = cur->next;
+        }
+        return cur->val;
     }
-    
+
     void addAtHead(int val) {
-
+        auto *newNode = new ListNode(val);
+        newNode->next = _dummyHead->next;  // newNode先指head
+        _dummyHead->next = newNode;  // dummy再指newNode
+        _size++;
     }
-    
+
     void addAtTail(int val) {
-
+        ListNode *cur = _dummyHead;
+        auto *newNode = new ListNode(val);
+        while (cur->next != nullptr) { // 注意不能while (_size--)！
+            cur = cur->next;
+        }
+        cur->next = newNode;
+        _size++;
     }
-    
+
+
+    // 在第index个节点之前插入一个新节点，例如index为0，那么新插入的节点为链表的新头节点。
+    // 如果index 等于链表的长度，则说明是新插入的节点为链表的尾结点
+    // 如果index小于0，则在头部插入节点
     void addAtIndex(int index, int val) {
-
+        if (index > _size) return;  // 如果index大于链表的长度，不会插入到链表中，则返回空
+        if (index < 0) index = 0;
+        auto* newNode = new ListNode(val);
+        ListNode* cur = _dummyHead;
+        while (index--) {
+            cur = cur->next;
+        }
+        newNode->next = cur->next;  // 经典插入newNode操作, 1
+        cur->next = newNode;        // 经典插入newNode操作, 2
+        _size++;
     }
-    
+
     void deleteAtIndex(int index) {
-
+        if (index >= _size || index < 0) return;
+        ListNode* cur = _dummyHead;
+        while (index--) {
+            cur = cur->next;
+        }
+        ListNode* tmp = cur->next;
+        cur->next = cur->next->next;
+        delete tmp;  // delete命令指示释放了tmp指针原本所指的那部分内存!
+        // 被delete后的指针tmp的值（地址）并非就是NULL，而是随机值。也就是被delete后，
+        tmp = nullptr;  // 如果不再加上一句tmp=nullptr,tmp会成为乱指的野指针!
+        // 如果之后的程序不小心使用了tmp，会指向难以预想的内存空间
+        _size--;
     }
+private:        // 注意得加这个私有变量
+    int _size;
+    ListNode* _dummyHead;
 };
 
 /**
