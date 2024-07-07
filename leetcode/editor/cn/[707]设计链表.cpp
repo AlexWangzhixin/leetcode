@@ -60,7 +60,7 @@ using namespace std;
 class MyLinkedList {
 public:
     MyLinkedList() {
-        _dummyHead = new ListNode(0);
+        _dummyHead = new ListNode(0);  //_dummy “_” 默认私有成员变量
         _size = 0;
     }
 
@@ -97,7 +97,7 @@ public:
     // 如果index 等于链表的长度，则说明是新插入的节点为链表的尾结点
     // 如果index小于0，则在头部插入节点
     void addAtIndex(int index, int val) {
-        if (index > _size) return;  // 如果index大于链表的长度，不会插入到链表中，则返回空
+        if (index > _size) return;  //异常处理，相当于循环的break
         if (index < 0) index = 0;
         auto* newNode = new ListNode(val);
         ListNode* cur = _dummyHead;
@@ -123,7 +123,7 @@ public:
         // 如果之后的程序不小心使用了tmp，会指向难以预想的内存空间
         _size--;
     }
-private:        // 注意得加这个私有变量
+private:        // 注意得加这个私有变量, 且只能加在最后
     int _size;
     ListNode* _dummyHead;
 };
