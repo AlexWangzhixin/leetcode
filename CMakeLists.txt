@@ -11,4 +11,5 @@ add_subdirectory(leetcode/editor/cn/include) # 头文件库地址得自己加
 add_executable(task leetcode/editor/cn/[977]有序数组的平方.cpp
         leetcode/editor/cn/[977]有序数组的平方.cpp
         leetcode/editor/cn/[209]长度最小的子数组.cpp
-        leetcode/editor/cn/[27]移除元素.cpp)
+        leetcode/editor/cn/[27]移除元素.cpp
+        leetcode/editor/cn/[203]移除链表元素.cpp)
