@@ -68,7 +68,7 @@ public:
                 break;
             if (i > 0 && nums[i] == nums[i - 1]) //三元组元素a去重
                 continue;
-            // 以下开始两数之和
+            // 以下开始两数之 和
             unordered_set<int> set;
             for (int j = i + 1; j < nums.size(); j++) {
                 if (j > i + 2 && nums[j] == nums[j - 1] && nums[j - 1] == nums[j - 2])
