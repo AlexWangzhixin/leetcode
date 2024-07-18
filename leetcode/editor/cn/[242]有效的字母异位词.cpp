@@ -46,7 +46,7 @@ public:
     // 建议： 这道题目，大家可以感受到 数组 用来做哈希表 给我们带来的遍历之处。
     bool isAnagram(string s, string t)
     {
-        int record[26] = {0}; //init array
+        int record[26] = {0}; //使用初始化列表来初始化容器，如 vector、array
         for (int i = 0; i < s.size(); i++)
         {
             record[s[i] - 'a']++;

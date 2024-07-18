@@ -62,7 +62,7 @@ public:
 
     bool isHappy(int n) {
         unordered_set<int> set;
-        while (true) {
+        while (true) {  // 不要while(1)了
             int sum = getSum(n);
             if (sum == 1) {
                 return true;
