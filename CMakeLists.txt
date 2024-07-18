@@ -18,4 +18,5 @@ add_executable(task leetcode/editor/cn/[977]有序数组的平方.cpp
         leetcode/editor/cn/[24]两两交换链表中的节点.cpp
         "leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.cpp"
         leetcode/editor/cn/[160]相交链表.cpp
-        "leetcode/editor/cn/[142]环形链表 II.cpp")
+        "leetcode/editor/cn/[142]环形链表 II.cpp"
+        leetcode/editor/cn/[242]有效的字母异位词.cpp)
