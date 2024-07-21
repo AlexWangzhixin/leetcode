@@ -27,4 +27,6 @@ add_executable(task leetcode/editor/cn/[977]有序数组的平方.cpp
         leetcode/editor/cn/[383]赎金信.cpp
         leetcode/editor/cn/[15]三数之和.cpp
         leetcode/editor/cn/[18]四数之和.cpp
-        leetcode/editor/cn/[344]反转字符串.cpp)
+        leetcode/editor/cn/[344]反转字符串.cpp
+        "leetcode/editor/cn/[541]反转字符串 II.cpp"
+        leetcode/editor/cn/[151]反转字符串中的单词.cpp)
